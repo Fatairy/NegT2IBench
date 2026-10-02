@@ -1,0 +1,10 @@
+name: negt2i-vqa-metrics
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.11
+  - pip=24.3
+  - setuptools>=75
+  - ffmpeg=6.1.2

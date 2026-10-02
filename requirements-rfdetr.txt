@@ -1,0 +1,7 @@
+# RF-DETR-XL detector overlay. RF-DETR needs a newer torch than the base env, so it is
+# installed into its own directory and prepended to PYTHONPATH for EVALUATION ONLY
+# (config.sh: RFDETR_OVERLAY). Install with:
+#   pip install --target "$RFDETR_OVERLAY" -r requirements-rfdetr.txt
+# This pulls torch 2.14 / torchvision 0.29 / transformers 5.16 into the overlay, which
+# shadow the base env's copies while evaluating.
+rfdetr==1.10.1

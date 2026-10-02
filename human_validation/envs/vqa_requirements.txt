@@ -1,0 +1,15 @@
+# Kept separate from the ImageReward/HPS environment: Qwen2.5-VL and
+# t2v-metrics require a newer Transformers stack.
+torch>=2.7,<3
+torchvision>=0.22,<1
+# The PyPI 3.0 release depends on obsolete apex/cryptacular packages that do
+# not build on Python 3.11. Install the maintained upstream implementation.
+t2v-metrics @ git+https://github.com/linzhiqiu/t2v_metrics.git
+transformers>=5,<6
+accelerate>=1.0
+qwen-vl-utils>=0.0.8
+Pillow>=10
+tqdm>=4.66
+# Optional backends (install only when evaluating those rows):
+# modelscope>=1.20
+# einops>=0.8

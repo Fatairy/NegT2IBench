@@ -1,0 +1,30 @@
+# Installed after the CUDA-enabled PyTorch wheels by create_environment.sh.
+pillow==10.4.0
+numpy==1.26.4
+scipy==1.14.1
+pandas==2.2.3
+scikit-learn==1.5.2
+PyYAML==6.0.2
+tqdm==4.67.1
+
+open-clip-torch==2.29.0
+# ImageReward vendors BLIP code that imports apply_chunking_to_forward from
+# modeling_utils; that API was removed in newer Transformers releases.
+transformers==4.27.4
+accelerate==0.21.0
+safetensors==0.4.5
+huggingface-hub==0.19.4
+
+# ImageReward imports its optional ReFL module at package import time. This is
+# the last diffusers generation compatible with its vendored BLIP/Transformers
+# stack; newer diffusers require Transformers APIs unavailable in 4.27.4.
+diffusers==0.16.0
+
+# ImageReward's official BLIP + MLP implementation.
+# ImageReward imports `clip` eagerly but its wheel does not reliably install the
+# direct-URL dependency, so pin the official OpenAI implementation explicitly.
+clip @ git+https://github.com/openai/CLIP.git@a1d071733d7111c9c014f024669f959182114e33
+image-reward==1.5
+
+# Official CLIP-H/14 Human Preference Score v2 implementation.
+hpsv2==1.2.0

@@ -1,0 +1,10 @@
+# Official mPLUG uses the pre-GenerationMixin Transformers API.
+transformers==4.14.1
+timm==0.4.9
+ftfy>=6.1
+more_itertools
+colorlog
+oss2
+opencv-python-headless==4.9.0.80  # newer builds pull in numpy>=2, which torch==2.0.1 was not built against
+numpy==1.24.4
+Pillow>=10

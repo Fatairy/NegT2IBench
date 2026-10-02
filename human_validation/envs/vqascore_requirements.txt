@@ -1,0 +1,17 @@
+# Minimal runtime for the reproducible CLIP-FlanT5 adapter. The environment
+# script installs t2v-metrics with --no-deps because that historical revision's
+# broad research dependency list includes unrelated/broken packages.
+transformers==4.49.0
+accelerate>=1.0
+huggingface-hub>=0.19.4
+sentencepiece>=0.1.99
+protobuf>=4
+numpy==1.26.4
+Pillow>=10
+open-clip-torch>=2.23.0
+opencv-python-headless==4.9.0.80  # newer builds pull in numpy>=2, conflicting with the numpy==1.26.4 pin below
+einops>=0.8
+einops-exts>=0.0.4
+ftfy>=6.1.1
+iopath>=0.1.10
+fairscale>=0.4.13

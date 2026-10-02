@@ -1,0 +1,14 @@
+name: negt2i-clip-metrics
+
+channels:
+  - conda-forge
+
+dependencies:
+  # Keep the Conda solve deliberately minimal. Some configured
+  # PyTorch/Conda channels expose an older libjpeg-turbo that conflicts with
+  # current Pillow. create_environment.sh installs the pinned model stack from
+  # wheels after this base environment is created.
+  - python=3.11
+  - pip=24.3
+  # OpenAI CLIP still imports pkg_resources from its legacy setup.py.
+  - setuptools=75.8

@@ -1,0 +1,13 @@
+# Everything the pipeline writes (images, verdicts, reports, logs)
+/outputs/
+# Model caches and local environments (config.sh: CACHE_DIR, RFDETR_OVERLAY)
+/cache/
+/envs/
+/external/
+/tmp/
+# Raw annotation exports contain personal data; commit only the anonymized file
+/human_annotations/*raw*
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
